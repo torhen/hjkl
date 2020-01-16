@@ -7,4 +7,4 @@ CapsLock & l::Send {Right}
 CapsLock & Space::Send  {Backspace}
 
 CapsLock & s::Send #s
-
+CapsLock & e::Send {Escape}
