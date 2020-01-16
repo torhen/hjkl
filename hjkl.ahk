@@ -6,7 +6,5 @@ CapsLock & k::Send {Up}
 CapsLock & l::Send {Right}
 CapsLock & Space::Send  {Backspace}
 
-CapsLock & s::Send #r
-
-
+CapsLock & s::Send #s
 
