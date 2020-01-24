@@ -1,9 +1,33 @@
 ﻿SetCapsLockState, AlwaysOff
 
-CapsLock & h::Send {Left}
-CapsLock & j::Send {Down}
-CapsLock & k::Send {Up}
-CapsLock & l::Send {Right}
+CapsLock & h::
+	if GetKeyState("Shift", "P")
+		send +{Left}
+	else
+		send {Left}
+	return
+	
+CapsLock & j::
+	if GetKeyState("Shift", "P")
+		send +{Down}
+	else
+		send {Down}
+	return
+	
+CapsLock & k::
+	if GetKeyState("Shift", "P")
+		send +{Up}
+	else
+		send {Up}
+	return
+	
+CapsLock & l::
+	if GetKeyState("Shift", "P")
+		send +{Right}
+	else
+		send {Right}
+	return
+	
 CapsLock & Space::Send  {Backspace}
 CapsLock & d::Send {Delete}
 CapsLock & e::Send {Escape}
