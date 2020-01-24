@@ -28,6 +28,10 @@ CapsLock & l::
 		send {Right}
 	return
 	
+CapsLock & c::Send ^c
+CapsLock & v::Send ^v
+CapsLock & x::Send ^x
+	
 CapsLock & Space::Send  {Backspace}
 CapsLock & d::Send {Delete}
 CapsLock & e::Send {Escape}
