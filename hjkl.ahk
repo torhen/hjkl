@@ -3,6 +3,8 @@
 CapsLock & h::
 	if GetKeyState("Shift", "P")
 		send +{Left}
+	else if GetKeyState("Control", "P")
+		send ^+{Left}
 	else
 		send {Left}
 	return
@@ -24,12 +26,53 @@ CapsLock & k::
 CapsLock & l::
 	if GetKeyState("Shift", "P")
 		send +{Right}
+	else if GetKeyState("Control", "P")
+		send ^+{Right}
 	else
 		send {Right}
 	return
 	
+CapsLock & o::
+	send {End}
+	send {Enter}
+	return
+
+CapsLock & v::
+	send {Home}
+	send +{End}
+	return
+		
+;copy whole line
+CapsLock & y::
+	send {Home}
+	send +{End}
+	send ^c
+	send {Home}
+	return
+
+	
+CapsLock & p::
+	send {End}
+	send {Enter}
+	send ^v
+	return
+	
+CapsLock & d::
+	if (DeleteMode=1){
+		send {Home}
+		send +{End}
+		send {Delete}
+		send {Delete}
+		DeleteMode=0
+		}
+	else 
+		DeleteMode=1
+	return
+	
+	
+	
 CapsLock & Space::Send  {Backspace}
-CapsLock & d::Send {Delete}
+CapsLock & x::Send {Delete}
 CapsLock & e::Send {Escape}
 CapsLock & w::Send ^{Right}
 CapsLock & b::Send ^{Left}
