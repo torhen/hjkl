@@ -1,5 +1,6 @@
 ﻿SetCapsLockState, AlwaysOff
 
+;hjkl
 CapsLock & h::
 	if GetKeyState("Shift", "P")
 		send +{Left}
@@ -32,51 +33,39 @@ CapsLock & l::
 		send {Right}
 	return
 
-CapsLock & c::
-	send ^c
-	return
-	
-CapsLock & x::
-	send ^x
-	return
-	
-CapsLock & v::
-	send ^v
-	return
+;backspace
+CapsLock & Space::Send {Backspace}
 
-CapsLock & 0::
+
+;Home and End
+CapsLock & u::
 	if GetKeyState("Shift", "P")
 		Send +{Home}
 	else
 		Send {Home}
 	return
 
-CapsLock & $::
+CapsLock & i::
 	if GetKeyState("Shift", "P")
 		Send +{End}
 	else
 		Send {End}
-	return
 
-	
-CapsLock & Space::Send  {Backspace}
-CapsLock & d::Send {Delete}
-CapsLock & e::Send {Escape}
-
-CapsLock & w::
-	if GetKeyState("Shift", "P")
-		Send +^{Right}
-	else
-		Send +{Right}
-	return
-
-CapsLock & b::
+CapsLock & n::
 	if GetKeyState("Shift", "P")
 		Send +^{Left}
 	else
-		Send +{Left}
+		Send ^{Left}
 	return
 
+CapsLock & m::
+	if GetKeyState("Shift", "P")
+		Send +^{Right}
+	else
+		Send ^{Right}
+	return
+
+
+
 CapsLock & s::#s
-CapsLock & f::Run Explorer
-CapsLock & n::Run Notepad
+
