@@ -65,7 +65,8 @@ CapsLock & m::
 		Send ^{Right}
 	return
 
-
+CapsLock & d:: send {PgUp}
+CapsLock & f:: send {PgDn}
 
 CapsLock & s::#s
 
