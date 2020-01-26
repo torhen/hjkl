@@ -31,53 +31,51 @@ CapsLock & l::
 	else
 		send {Right}
 	return
-	
-CapsLock & o::
-	send {End}
-	send {Enter}
-	return
 
-CapsLock & v::
-	send {Home}
-	send +{End}
-	return
-		
-;copy whole line
-CapsLock & y::
-	send {Home}
-	send +{End}
+CapsLock & c::
 	send ^c
-	send {Home}
 	return
-
 	
-CapsLock & p::
-	send {End}
-	send {Enter}
+CapsLock & x::
+	send ^x
+	return
+	
+CapsLock & v::
 	send ^v
 	return
-	
-CapsLock & d::
-	if (DeleteMode=1){
-		send {Home}
-		send +{End}
-		send {Delete}
-		send {Delete}
-		DeleteMode=0
-		}
-	else 
-		DeleteMode=1
+
+CapsLock & 0::
+	if GetKeyState("Shift", "P")
+		Send +{Home}
+	else
+		Send {Home}
 	return
-	
-	
+
+CapsLock & $::
+	if GetKeyState("Shift", "P")
+		Send +{End}
+	else
+		Send {End}
+	return
+
 	
 CapsLock & Space::Send  {Backspace}
-CapsLock & x::Send {Delete}
+CapsLock & d::Send {Delete}
 CapsLock & e::Send {Escape}
-CapsLock & w::Send ^{Right}
-CapsLock & b::Send ^{Left}
-CapsLock & 0::Send {Home}
-CapsLock & $::Send {End}
+
+CapsLock & w::
+	if GetKeyState("Shift", "P")
+		Send +^{Right}
+	else
+		Send +{Right}
+	return
+
+CapsLock & b::
+	if GetKeyState("Shift", "P")
+		Send +^{Left}
+	else
+		Send +{Left}
+	return
 
 CapsLock & s::#s
 CapsLock & f::Run Explorer
