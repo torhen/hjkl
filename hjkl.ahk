@@ -50,6 +50,7 @@ CapsLock & i::
 		Send +{End}
 	else
 		Send {End}
+	return
 
 CapsLock & n::
 	if GetKeyState("Shift", "P")
