@@ -1,31 +1,30 @@
 ﻿SetCapsLockState, AlwaysOff
 
+CapsLock & a::return
 ;hjkl
 CapsLock & h::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		send +{Left}
-	else if GetKeyState("Control", "P")
-		send ^+{Left}
 	else
 		send {Left}
 	return
 	
 CapsLock & j::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		send +{Down}
 	else
 		send {Down}
 	return
 	
 CapsLock & k::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		send +{Up}
 	else
 		send {Up}
 	return
 	
 CapsLock & l::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		send +{Right}
 	else if GetKeyState("Control", "P")
 		send ^+{Right}
@@ -46,28 +45,33 @@ CapsLock & u::
 	return
 
 CapsLock & i::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		Send +{End}
 	else
 		Send {End}
 	return
 
 CapsLock & n::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		Send +^{Left}
 	else
 		Send ^{Left}
 	return
 
 CapsLock & m::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		Send +^{Right}
 	else
 		Send ^{Right}
 	return
 
-CapsLock & d:: send {PgUp}
-CapsLock & f:: send {PgDn}
+CapsLock & o:: send {PgUp}
+CapsLock & p:: send {PgDn}
+
+CapsLock & d:: ^x
+CapsLock & f:: ^c
+CapsLock & g:: ^v
+
 
 CapsLock & s::#s
 
