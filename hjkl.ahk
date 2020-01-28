@@ -1,10 +1,13 @@
 ﻿SetCapsLockState, AlwaysOff
 
 CapsLock & a::return
+
 ;hjkl
 CapsLock & h::
 	if GetKeyState("a", "P")
 		send +{Left}
+	else if GetKeyState("Control", "P")
+		send ^+{Left}
 	else
 		send {Left}
 	return
@@ -38,7 +41,7 @@ CapsLock & Space::Send {Backspace}
 
 ;Home and End
 CapsLock & u::
-	if GetKeyState("Shift", "P")
+	if GetKeyState("a", "P")
 		Send +{Home}
 	else
 		Send {Home}
@@ -64,14 +67,15 @@ CapsLock & m::
 	else
 		Send ^{Right}
 	return
-
+	
 CapsLock & o:: send {PgUp}
 CapsLock & p:: send {PgDn}
 
-CapsLock & d:: ^x
-CapsLock & f:: ^c
-CapsLock & g:: ^v
+CapsLock & z:: send ^z
+CapsLock & d:: send ^x
+CapsLock & f:: send ^c 
+CapsLock & g:: send ^v
 
-
+CapsLock & e:: send {Escape}
 CapsLock & s::#s
 
