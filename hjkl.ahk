@@ -36,7 +36,7 @@ CapsLock & l::
 		send {Right}
 	return
 
-;zuio for word steps
+;zuio for word/paragraph steps
 ;-------------------
 
 CapsLock & z::
@@ -50,13 +50,9 @@ CapsLock & u::
 	send {Down}
 	send {Down}
 	send {Down}
-	send {Down}
-	send {Down}
 	return
 	
 CapsLock & i::
-	send {Up}
-	send {Up}
 	send {Up}
 	send {Up}
 	send {Up}
