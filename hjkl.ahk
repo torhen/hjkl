@@ -2,7 +2,8 @@
 
 CapsLock & a::return
 
-;hjkl
+;hjkl for single steps
+;---------------------
 CapsLock & h::
 	if GetKeyState("a", "P")
 		send +{Left}
@@ -25,7 +26,7 @@ CapsLock & k::
 	else
 		send {Up}
 	return
-	
+
 CapsLock & l::
 	if GetKeyState("a", "P")
 		send +{Right}
@@ -35,43 +36,61 @@ CapsLock & l::
 		send {Right}
 	return
 
-;backspace
-CapsLock & Space::Send {Backspace}
+;zuio for word steps
+;-------------------
 
-
-;Home and End
-CapsLock & u::
-	if GetKeyState("a", "P")
-		Send +{Home}
-	else
-		Send {Home}
-	return
-
-CapsLock & i::
-	if GetKeyState("a", "P")
-		Send +{End}
-	else
-		Send {End}
-	return
-
-CapsLock & n::
+CapsLock & z::
 	if GetKeyState("a", "P")
 		Send +^{Left}
 	else
 		Send ^{Left}
 	return
 
-CapsLock & m::
+CapsLock & u::
+	send {Down}
+	send {Down}
+	send {Down}
+	send {Down}
+	send {Down}
+	return
+	
+CapsLock & i::
+	send {Up}
+	send {Up}
+	send {Up}
+	send {Up}
+	send {Up}
+	return
+	
+CapsLock & o::
 	if GetKeyState("a", "P")
 		Send +^{Right}
 	else
 		Send ^{Right}
 	return
 	
-CapsLock & o:: send {PgUp}
-CapsLock & p:: send {PgDn}
+; Home and End
+;--------------
+CapsLock & n::
+	if GetKeyState("a", "P")
+		Send +{Home}
+	else
+		Send {Home}
+	return
 
-CapsLock & z:: send ^z
+CapsLock & m::
+	if GetKeyState("a", "P")
+		Send +{End}
+	else
+		Send {End}
+	return
+
+;backspace and delete
+;------------------
+CapsLock & Space::Send {Backspace}
+CapsLock & q:: send {Delete}
+
+CapsLock & r:: send ^z
 CapsLock & d:: send ^x
 CapsLock & f:: send ^c 
 CapsLock & g:: send ^v
