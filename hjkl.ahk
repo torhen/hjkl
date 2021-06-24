@@ -1,4 +1,4 @@
-﻿SetCapsLockState, AlwaysOff
+SetCapsLockState, AlwaysOff
 
 CapsLock & a::return
 
@@ -35,37 +35,8 @@ CapsLock & l::
 	else
 		send {Right}
 	return
-
-;zuio for word/paragraph steps
-;-------------------
-
-CapsLock & z::
-	if GetKeyState("a", "P")
-		Send +^{Left}
-	else
-		Send ^{Left}
-	return
-
-CapsLock & u::
-	send {Down}
-	send {Down}
-	send {Down}
-	return
 	
-CapsLock & i::
-	send {Up}
-	send {Up}
-	send {Up}
-	return
-	
-CapsLock & o::
-	if GetKeyState("a", "P")
-		Send +^{Right}
-	else
-		Send ^{Right}
-	return
-	
-; Home and End
+; nm for Home and End
 ;--------------
 CapsLock & n::
 	if GetKeyState("a", "P")
@@ -81,16 +52,28 @@ CapsLock & m::
 		Send {End}
 	return
 
-;backspace and delete
+;ui for word steps
+;-------------------
+
+CapsLock & u::
+	if GetKeyState("a", "P")
+		Send +^{Left}
+	else
+		Send ^{Left}
+	return
+
+CapsLock & i::
+	if GetKeyState("a", "P")
+		Send +^{Right}
+	else
+		Send ^{Right}
+	return
+	
+; Escape
+;--------------
+CapsLock & e:: send {Escape}
+
+; space for backspace
 ;------------------
 CapsLock & Space::Send {Backspace}
-CapsLock & q:: send {Delete}
-
-CapsLock & r:: send ^z
-CapsLock & d:: send ^x
-CapsLock & f:: send ^c 
-CapsLock & g:: send ^v
-
-CapsLock & e:: send {Escape}
-CapsLock & s::#s
 
