@@ -1,5 +1,8 @@
 ﻿SetCapsLockState, AlwaysOff
 
+;for outcomment Jupyter lab
+F2::^NumpadDiv
+
 CapsLock & a::return
 
 ;hjkl for single steps
