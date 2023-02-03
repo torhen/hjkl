@@ -1,7 +1,7 @@
 ﻿SetCapsLockState, AlwaysOff
 
 ;for outcomment Jupyter lab
-F2::^NumpadDiv
+F5::^NumpadDiv
 
 CapsLock & a::return
 
